@@ -54,7 +54,7 @@
 }
 
 - (void)sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
-    
+    [super sendAction:action to:target forEvent:event];
 }
 
 - (void)mySendAction:(SEL)action to:(id)target forEvent:(UIEvent*)event{
