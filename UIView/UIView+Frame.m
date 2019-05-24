@@ -75,5 +75,59 @@
     return CGRectGetMinY(self.frame);
 }
 
+- (void)setSize:(CGSize)size
+{
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
+- (CGSize)size
+{
+    return self.frame.size;
+}
+
+- (void)setOrigin:(CGPoint)origin
+{
+    CGRect frame = self.frame;
+    frame.origin = origin;
+    self.frame = frame;
+}
+
+- (CGPoint)origin
+{
+    return self.frame.origin;
+}
+
+-(void)setCornerRadius:(CGFloat)cornerRadius
+{
+    self.layer.cornerRadius = cornerRadius;
+    self.layer.masksToBounds = YES;
+}
+
+-(CGFloat)cornerRadius
+{
+    return self.layer.cornerRadius;
+}
+
+-(void)setBorderColor:(UIColor *)borderColor
+{
+    self.layer.borderColor = borderColor.CGColor;
+}
+
+-(UIColor *)borderColor
+{
+    return [UIColor colorWithCGColor:self.layer.borderColor];
+}
+
+-(void)setBorderWidth:(CGFloat)borderWidth
+{
+    self.layer.borderWidth = borderWidth;
+}
+
+-(CGFloat)borderWidth
+{
+    return self.layer.borderWidth;
+}
 
 @end
