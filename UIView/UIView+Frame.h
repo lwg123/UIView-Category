@@ -22,5 +22,11 @@
 @property (nonatomic,assign,readonly) CGFloat maxX;
 @property (nonatomic,assign,readonly) CGFloat minX;
 
+@property (nonatomic, assign) CGSize size;
+@property (nonatomic, assign) CGPoint origin;
+@property (nonatomic, assign) CGFloat cornerRadius;
+@property (nonatomic, assign) CGFloat borderWidth;
+@property (nonatomic, strong) UIColor *borderColor;
+
 
 @end
